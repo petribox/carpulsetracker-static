@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Pulse Tracker is closing | Thank you</title>
+  <meta name="description" content="Car Pulse Tracker is closing. Thank you to every customer and follower of carpulsetracker.com.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#000e1a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Car Pulse Tracker">
+  <meta property="og:title" content="Car Pulse Tracker is closing | Thank you">
+  <meta property="og:description" content="Car Pulse Tracker is closing. Thank you to every customer and follower of carpulsetracker.com.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400 800;
+      font-display: swap;
+      src: url("fonts/inter-cyrillic.woff2") format("woff2");
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400 800;
+      font-display: swap;
+      src: url("fonts/inter-latin-ext.woff2") format("woff2");
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400 800;
+      font-display: swap;
+      src: url("fonts/inter-latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    :root {
+      --bg: #071929;
+      --bar: #000e1a;
+      --lime: #c8f135;
+      --white: #ffffff;
+      --muted: rgba(255, 255, 255, 0.78);
+      --faint: rgba(255, 255, 255, 0.58);
+      --line: rgba(255, 255, 255, 0.08);
+      --pad: clamp(1.25rem, 8.3vw, 7.5rem);
+      --bar-h: 62px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      min-height: 100svh;
+    }
+
+    /* Top bar */
+    .nav {
+      height: var(--bar-h);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.25rem, 2.8vw, 2.5rem);
+      background: var(--bar);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+      z-index: 5;
+    }
+    .logo-wrap { width: 7.25rem; height: 1.95rem; overflow: hidden; }
+    .logo-image { width: 100%; height: auto; display: block; }
+
+    .nav-right { display: flex; align-items: center; gap: 1.25rem; }
+    .nav-link {
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+    .nav-link:hover, .nav-link:focus-visible { color: var(--white); }
+
+    .lang-select {
+      appearance: none;
+      -webkit-appearance: none;
+      min-height: 44px;
+      padding: 0.35rem 2.1rem 0.35rem 0.85rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 0.7rem center;
+      color: var(--white);
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .lang-select:hover { background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.45); }
+    .lang-select:focus-visible { outline: 2px solid var(--lime); outline-offset: 2px; }
+    .lang-select option { background: var(--bg); color: var(--white); }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--bg);
+    }
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse at center, rgba(0, 14, 26, 0.7) 0%, rgba(0, 14, 26, 0.5) 100%),
+        linear-gradient(180deg, rgba(0, 14, 26, 0.3) 0%, rgba(0, 14, 26, 0) 30%, rgba(0, 14, 26, 0.6) 100%);
+    }
+    .hero-inner {
+      width: 100%;
+      padding: 3rem var(--pad);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.3rem 0.85rem;
+      border: 1px solid var(--lime);
+      border-radius: 999px;
+      color: var(--lime);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.6rem;
+    }
+    h1 {
+      margin: 0 auto 1.6rem;
+      font-size: clamp(2.6rem, 6.4vw, 4.6rem);
+      line-height: 1.04;
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      max-width: 16ch;
+    }
+    h1 .accent { color: var(--lime); display: block; }
+    .lead {
+      margin: 0 auto 2.25rem;
+      max-width: 38rem;
+      font-size: clamp(1.1rem, 1.9vw, 1.3rem);
+      line-height: 1.7;
+      color: var(--muted);
+      text-wrap: balance;
+    }
+
+    .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 2rem; margin: 0; padding: 0; list-style: none; }
+    .facts li { display: flex; align-items: center; gap: 0.55rem; color: var(--faint); font-size: 0.9rem; }
+    .facts svg { width: 1.2rem; height: 1.2rem; stroke: var(--lime); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    /* Partners */
+    .partners {
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      max-width: 38rem;
+      border-top: 1px solid var(--line);
+    }
+    .partners-note { margin: 0 0 1.25rem; color: var(--faint); font-size: 0.95rem; }
+    .partners-note strong { color: var(--muted); font-weight: 600; }
+    .partners-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.95rem 1.6rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--white);
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:hover, .btn:focus-visible { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.6); }
+
+    /* Footer */
+    footer {
+      flex-shrink: 0;
+      padding: 1.25rem var(--pad);
+      background: var(--bar);
+      border-top: 1px solid var(--line);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    @media (max-width: 560px) {
+      .btn { width: 100%; }
+      .hero-inner { padding-top: 2.25rem; padding-bottom: 2.25rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-video { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="logo-wrap">
+      <img class="logo-image" src="logo.svg" alt="Car Pulse Tracker">
+    </div>
+    <div class="nav-right">
+      <a class="nav-link" href="https://www.boxinom.com" data-i18n="nav.contact">Contact</a>
+      <select id="lang" class="lang-select" aria-label="Language" data-i18n-aria="lang.label">
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+      <source src="video/cpt_new_intro.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-inner">
+      <span class="badge" data-i18n="badge">Service closed</span>
+      <h1>
+        <span data-i18n="title.line1">Car Pulse Tracker</span>
+        <span class="accent" data-i18n="title.line2">is closing.</span>
+      </h1>
+      <p class="lead" data-i18n="lead">Thank you to every customer and follower of carpulsetracker.com. New reports are no longer available. It has been a pleasure helping you understand your EV's true health.</p>
+
+      <ul class="facts">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span data-i18n="fact.thanks">Thank you for your trust</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg>
+          <span data-i18n="fact.noReports">No new reports</span>
+        </li>
+      </ul>
+
+      <div class="partners">
+        <p class="partners-note" data-i18n-html="partners.note">Car Pulse Tracker was built in partnership between <strong>Csitea</strong> and <strong>Boxinom</strong>.</p>
+        <div class="partners-actions">
+          <a class="btn" href="https://csitea.net">Csitea.net</a>
+          <a class="btn" href="https://www.boxinom.com">Boxinom.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; Car Pulse Tracker</span>
+  </footer>
+
+  <script src="locales/en.js" defer></script>
+  <script src="locales/fi.js" defer></script>
+  <script src="locales/sv.js" defer></script>
+  <script src="locales/fr.js" defer></script>
+  <script src="locales/de.js" defer></script>
+  <script src="locales/bg.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+</body>
+</html>

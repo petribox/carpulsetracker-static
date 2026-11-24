@@ -1,0 +1,10 @@
+# Runs on vps2 in /opt/sites/carpulsetracker/app, port 3041 on 127.0.0.1 only; nginx on the server
+# proxies carpulsetracker.com and www.carpulsetracker.com to it.
+name: carpulsetracker
+services:
+  web:
+    build: .
+    container_name: carpulsetracker
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3041:80"

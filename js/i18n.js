@@ -39,11 +39,6 @@
     var stored = readStored();
     if (stored && isSupported(stored)) { return stored; }
 
-    var prefs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
-    for (var i = 0; i < prefs.length; i++) {
-      var short = String(prefs[i] || "").toLowerCase().split("-")[0];
-      if (isSupported(short)) { return short; }
-    }
     return DEFAULT_LANG;
   }
 
